@@ -10,8 +10,8 @@
 
 #+title: S8-Buses-del-Sistema
 #+date: 
-#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon
-#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec
+#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera
+#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec, danny.tipan@epn.edu.ec, anderson.herrera@epn.edu.ec
 #+language: es
 #+select_tags: export
 #+exclude_tags: noexport
@@ -220,7 +220,225 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
        procesadores y memoria. Estos paquetes tienen un formato estándar, aunque
 	     pueden adaptarse según las necesidades de diferentes tipos de dispositivos.
 * PCI Express (E4, 11)
-** PCI Express (E4, 11)
+* Introducción a PCI Express
+** ¿Qué es PCI Express?
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+PCI Express representa la evolución natural del bus PCI tradicional. Esta tecnología surgió como respuesta a las crecientes demandas de velocidad y eficiencia en la transferencia de datos. A diferencia de su predecesor, PCIe implementa un esquema de interconexión punto a punto, abandonando la arquitectura de bus compartido para ofrecer mayor rendimiento y flexibilidad.
+
+** Origen y Desarrollo
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+La necesidad de PCIe surgió cuando los esquemas basados en bus tradicionales alcanzaron sus límites de capacidad. Los dispositivos modernos, como las tarjetas gráficas y las unidades de almacenamiento de alta velocidad, demandaban un nuevo estándar capaz de manejar mayores velocidades de transferencia y múltiples flujos de datos simultáneos.
+
+* Dispositivo complejo raíz
+** El Complejo Raíz
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+En el corazón de la arquitectura PCIe encontramos el Complejo Raíz, un componente crucial que actúa como puente entre el procesador, la memoria y el tejido de conmutación PCIe. Este elemento no solo gestiona las conexiones, sino que también armoniza las diferentes velocidades de transferencia entre los componentes del sistema.
+
+** El Complejo Raíz
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+#+BEGIN_EXPORT latex
+\begin{minipage}{0.5\textwidth}
+También conocido como chipset o puente anfitrión, conecta el procesador y el subsistema de memoria al tejido de conmutación PCI Express, que comprende uno o más dispositivos PCIe y conmutadores PCIe.
+Actúa como un dispositivo de almacenamiento intermedio para manejar las diferencias en las tasas de datos entre los controladores de E/S y los componentes de memoria y procesador.
+Además, traduce entre los formatos de transacción PCIe y los requisitos de señal y control del procesador y la memoria.
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{raiz.png}
+\end{minipage}
+#+END_EXPORT
+
+** Dispositivos que implementan PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+**Conmutador:** El conmutador gestiona múltiples flujos PCIe.
+
+**Punto final PCIe:** Dispositivo o controlador de E/S que implementa PCIe, como un
+conmutador Gigabit ethernet, un controlador gráfico o de vídeo, una interfaz de
+disco o un controlador de comunicaciones.
+
+**Endpoint heredado:** La categoría de punto final heredado está pensada para diseños
+existentes que se han migrado a PCI , y permite comportamientos heredados como uso de espacio de E/S y transacciones bloqueadas. No se permite que los
+puntos finales PCI Express requieran el uso de espacio de E/S en tiempo de
+ejecución y no deben utilizar transacciones bloqueadas.
+
+**Puente PCIe/PCI:** Permite conectar dispositivos PCI antiguos a sistemas basados
+en PCIe.
+
+* Arquitectura
+** La arquitectura del protocolo PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+La arquitectura del protocolo PCIe abarca las siguientes capas:
+
+**Físico:** Consiste en los propios cables que transportan las señales, así como los
+circuitos y la lógica que soportan las funciones auxiliares necesarias en la
+transmisión y recepción de los 1 y los 0.
+
+**Enlace de datos:** Es responsable de la transmisión fiable y del control de flujo. Los
+paquetes de datos generados y consumidos por la DLL se denominan paquetes de capa
+de enlace de datos (DLLP).
+
+**Transacción:** Genera y consume paquetes de datos utilizados para implementar
+mecanismos de transferencia de datos de carga/almacenamiento y también gestiona
+el control de flujo de dichos paquetes entre los dos componentes de un enlace. Los
+paquetes de datos generados y consumidos por la TL se denominan paquetes de capa
+de transacción (TLP).
+
+** La arquitectura del protocolo PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+[[file:arquitectura.png]]
+
+* Capas del Protocolo
+** Capa Física
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+La capa física de PCIe maneja la transmisión real de datos a través del medio físico. Emplea técnicas sofisticadas de codificación 128b/130b y scrambling para mantener la integridad de la señal y la sincronización. Estas técnicas permiten alcanzar velocidades de transferencia de hasta 16 GB/s, garantizando la fiabilidad en la transmisión de datos.
+
+** Capa de transacción PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+La capa de transacciones (TL) recibe peticiones de lectura y escritura del software por
+encima de la TL y crea paquetes de peticiones para su transmisión a un destino a través de
+la capa de enlace. La mayoría de las transacciones utilizan una técnica de transacción
+dividida. Con la técnica de
+transacción dividida, la finalización está separada en el tiempo de la solicitud, en contraste
+con una operación de bus típica en la que ambos lados de una transacción deben estar
+disponibles para aprovechar y utilizar el bus. Entre la solicitud y la finalización, otro
+tráfico PCIe puede utilizar el enlace.
+
+** Espacios de dirección
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+La TL admite cuatro espacios de dirección:
+
+**Memoria:** El espacio de memoria incluye la memoria principal del sistema.
+También incluye los dispositivos de E/S PCIe. Ciertos rangos de direcciones de
+memoria se asignan a dispositivos de E/S.
+
+**E/S:** Este espacio de direcciones se utiliza para dispositivos PCI heredados, con
+rangos de direcciones de memoria reservados utilizados para direccionar dispositivos
+de E/S heredados.
+
+**Configuración:** Este espacio de direcciones permite a la TL leer/escribir los registros de
+configuración asociados a los dispositivos de E/S.
+
+**Mensaje:** Este espacio de direcciones es para señales de control relacionadas con
+interrupciones, manejo de errores y gestión de energía.
+
+** Tipos de transmisión
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+| Espacio de direcciones | Tipo TLP                                | Propósito                                                                                     |
+|-------------------------+-----------------------------------------+-----------------------------------------------------------------------------------------------|
+| Memoria                | Petición de lectura de memoria          | Transfiere datos hacia o desde una ubicación en el mapa de memoria del sistema.              |
+|                        | Solicitud de bloqueo de lectura de memoria |                                                                                               |
+|                        | Petición de escritura en memoria        |                                                                                               |
+|-------------------------+-----------------------------------------+-----------------------------------------------------------------------------------------------|
+| E/S                    | Solicitud de lectura de E/S             | Transfiere datos a o desde una ubicación en el mapa de memoria del sistema para dispositivos heredados. |
+|                        | Solicitud de escritura de E/S           |                                                                                               |
+|-------------------------+-----------------------------------------+-----------------------------------------------------------------------------------------------|
+| Configuración          | Config Tipo 0 Petición de lectura       | Transferir datos hacia o desde una ubicación en el espacio de configuración de un dispositivo PCIe. |
+|                        | Config Tipo 0 Petición de escritura     |                                                                                               |
+|                        | Config Tipo 1 Petición de lectura       |                                                                                               |
+|                        | Solicitud de escritura Config Tipo 1    |                                                                                               |
+|-------------------------+-----------------------------------------+-----------------------------------------------------------------------------------------------|
+| Mensaje                | Solicitud de mensaje                    | Proporciona mensajería en banda e informes de eventos.                                       |
+|                        | Solicitud de mensaje con datos          |                                                                                               |
+|-------------------------+-----------------------------------------+-----------------------------------------------------------------------------------------------|
+| Memoria, E/S, Configuración | Finalización                        | Devuelto para determinadas solicitudes.                                                      |
+|                        | Finalización con datos                  |                                                                                               |
+|                        | Finalización bloqueada                  |                                                                                               |
+|                        | Finalización bloqueada con datos        |                                                                                               |
+
+** Formato de Unidad de Datos del Protocolo PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+Las transacciones PCIe se transmiten utilizando paquetes de capa de transacción.
+El formato de los paquetes en el protocolo PCIe (Peripheral Component Interconnect Express), desglosado en dos niveles:
+
+1.- Paquete de la Capa de Transacción (Transaction Layer Packet - TLP):
+Este paquete es generado por la capa de transacción y contiene las siguientes secciones:
+
+**STP framing (Start of TLP framing):** Señal de inicio del paquete para delimitarlo. Ocupa 1 byte.
+
+**Sequence Number:** Un campo que indica el número de secuencia del paquete para garantizar la entrega ordenada. También ocupa 1 byte.
+
+**Header:** Contiene información esencial para procesar el paquete, como dirección, tipo de operación, etc. Puede ocupar 12 o 16 bytes, dependiendo de la operación.
+
+**Data:** La carga útil del paquete, que puede variar entre 0 y 4096 bytes. Es opcional, dependiendo del tipo de transacción.
+
+**ECRC (End-to-End CRC):** Código de redundancia cíclica (CRC) opcional para verificar la integridad de los datos de extremo a extremo. Ocupa 0 o 4 bytes.
+
+**LCRC (Link CRC):** Otro CRC obligatorio para verificar la integridad de los datos en el enlace. También ocupa 4 bytes.
+
+**STP framing (End of TLP framing):** Marca el final del paquete, similar al campo inicial.
+Este paquete es luego entregado a la capa de enlace para mayor encapsulación.
+
+** Formato de Unidad de Datos del Protocolo PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+2.-Paquete de la Capa de Enlace de Datos (Data Link Layer Packet - DLLP):
+Este paquete es generado por la capa de enlace y es más pequeño que el TLP.
+
+**Start:** Indica el inicio del paquete de la capa de enlace. Ocupa 1 byte.
+
+**DLLP:** Contiene datos de control o gestión del enlace. Este es el núcleo del paquete de la capa de enlace.
+
+**CRC:** Código de redundancia cíclica usado para verificar la integridad de los datos transmitidos. También ocupa 1 byte.
+
+**End:** Indica el final del paquete. Ocupa 1 byte.
+
+** Formato de Unidad de Datos del Protocolo PCIe
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+[[file:formato.png]]
+
+** Capa de Enlace de Datos
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+Esta capa implementa mecanismos robustos para garantizar la entrega confiable de datos. Gestiona el control de flujo y maneja los paquetes de nivel de enlace (DLLPs). Su sistema de verificación incluye números de secuencia y códigos de verificación, asegurando la integridad de cada transmisión.
+
+
+
+* Arquitectura PCIe
+** Componentes Básicos
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+- El sistema PCIe consta de varios componentes clave:
+  1. **Root Complex**: Es el componente principal que se conecta al procesador. Controla el acceso a los dispositivos y coordina las transferencias de datos.
+  
+  2. **Switches**: Son los dispositivos que gestionan y dirigen el tráfico entre diferentes dispositivos conectados al sistema PCIe.
+  
+  3. **Endpoints**: Son los dispositivos conectados al bus PCIe, como tarjetas gráficas, SSDs, y otros periféricos.
+  
+* Conclusiones
+** Impacto en la Industria
+:PROPERTIES:
+:BEAMER_env: block
+:END:
+PCIe ha revolucionado la forma en que los componentes de computadora se comunican entre sí. Su arquitectura escalable y eficiente ha permitido el desarrollo de nuevas tecnologías y aplicaciones, estableciendo un estándar que continúa evolucionando para satisfacer las necesidades futuras de la industria.
+
 
 * Referencias
 ** Bibliografía
