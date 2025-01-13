@@ -128,7 +128,30 @@ variaciones en la definición de las líneas de los buses. Los cambios en la arq
 no afectan al bus de alta velocidad, y viceversa.
 ** Elementos de Diseño de un Bus (E2, 7)
 * Interconexión punto a punto
-** Interconexión punto a punto (E3, 11)
+** Interconexión punto a punto
+La interconexión punto a punto consiste en establecer una conexión directa entre dos componentes de un sistema informáticos.
+Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue el aumento de frecuencia.
+
+#+begin_export latex
+\begin{figure}[!h]
+   \vspace{-0.1cm}
+   \centering
+   \includegraphics[height=4cm, width=0.8\textwidth]{./Images/image1.png}
+   \vspace{-0.5cm} % Ajusta el espacio inferior
+   \caption{Multiprocesador con QPIs}
+   \label{fig:Representacion}
+\end{figure}
+#+end_export
+
+** Ventajas
+*** Ventajas                                                          :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.8
+:END:
+
+- Elimina cuellos de botella asociados con buses compartidos. 
+- Mejora la escalabilidad en sistemas multiprocesador, ya que cada procesador puede comunicarse con otros sin interferencias.
+- Aumenta la velocidad de transferencia y reduce la latencia.
 ** QPI (E3, 11)
 * PCI Express (E4, 11)
 ** PCI Express (E4, 11)
