@@ -152,7 +152,67 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 - Elimina cuellos de botella asociados con buses compartidos. 
 - Mejora la escalabilidad en sistemas multiprocesador, ya que cada procesador puede comunicarse con otros sin interferencias.
 - Aumenta la velocidad de transferencia y reduce la latencia.
-** QPI (E3, 11)
+* Introducción QPI
+** Introducción QPI
+     Fue creado para solucionar los problemas de los buses compartidos, ofreciendo una conexión directa
+     y eficiente entre los componentes. Este tipo de interconexión mejora el rendimiento al permitir
+     una comunicación más rápida y efectiva entre los procesadores y otros dispositivos, sin las
+     restricciones de los buses. 
+     \par
+** Características QPI: 
+   - Múltiples conexiones directas
+   - Arquitectura de protocolo en capas
+   -  Transferencia de datos en paquetes
+     
+* QuickPath Interconnect (QPI)
+
+** Características de QPI
+   - **Múltiples conexiones directas:**
+     - Cada componente (como el procesador, la memoria o los dispositivos de entrada/salida) se conecta
+        directamente con otros componentes de manera individual, sin tener que compartir el mismo canal.
+     - Al tener conexiones directas, cada componente puede enviar y recibir datos sin esperar turno,
+       lo que hace que todo funcione de manera más rápida y eficiente.
+   - **Arquitectura de protocolo en capas:**
+     - Se usan protocolos como TCP/IP para organizar y manejar la comunicación. En lugar de enviar
+       un mensaje de una sola forma simple, se utilizan diferentes pasos o etapas para asegurar que el
+       mensaje llegue correctamente.
+   - **Transferencia en paquetes:**
+     - Los datos no se envían de manera continua, sino que se dividen en paquetes.
+     - Cada paquete contiene una parte de los datos y también incluye información adicional, como encabezados
+       de control para saber a dónde deben ir los datos y códigos de control de errores para asegurarse de que
+       los datos no se pierdan o se dañen durante el envío.
+
+*** Arquitectura de protocolo de cuatro capas
+#+ATTR_LATEX: :width 0.8\textwidth
+[[./Images/QPI.png]]
+
+** Arquitectura de protocolo QPI
+   - **Capa física:**
+     - Está formada por 84 enlaces individuales, cada camino de datos consta de un par de cables,
+       llamados "carriles", que transmiten un bit a la vez.
+     - Hay 20 carriles en cada dirección: una para enviar datos y otra para recibir.
+     - Cada conjunto de 20 bits que se transmite se llama "phit", con una velocidad de transferencia
+       de 6.4 giga transferencias por segundo (GT/s).
+   - **Capa de enlace:**
+     - Realiza dos funciones clave: control de flujo y control de errores.
+       Estas se aplican a cada "flit" (unidad de control de flujo).
+     - Cada flit tiene una carga útil de 72 bits, que contiene los datos o mensajes.
+     - Los flits de datos transportan los bits reales entre los procesadores y el
+       controlador de entrada/salida.
+     - Los flits de mensaje se utilizan para funciones como el control de flujo y
+       el control de errores.
+     - El control de flujo asegura que el transmisor no envíe datos más rápido de
+       lo que el receptor puede procesar.
+     - El control de errores detecta y corrige errores en los datos durante la
+       transmisión, si un error se detecta, el receptor solicita al transmisor
+        que retransmita los datos dañados.
+   - **Capa de enrutamiento:**
+     - Se encarga de decidir el camino que un paquete de datos tomará a través
+       de los enlaces del sistema.
+   - **Capa de protocolo:**
+     - Los paquetes de datos se envían entre los componentes del sistema, como
+       procesadores y memoria. Estos paquetes tienen un formato estándar, aunque
+	     pueden adaptarse según las necesidades de diferentes tipos de dispositivos.
 * PCI Express (E4, 11)
 ** PCI Express (E4, 11)
 * Referencias
