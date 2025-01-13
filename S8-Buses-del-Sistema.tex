@@ -1,4 +1,4 @@
-% Created 2025-01-12 Sun 22:33
+% Created 2025-01-13 Mon 07:31
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -12,12 +12,13 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\nocite{*}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[backend=biber, style=apa]{biblatex}
-\addbibresource{/home/juanubuntu/ArquitecturaCom/FormatoTareas/bibliography.bib}
-\usetheme{default}
+\addbibresource{/home/davidmz/ArquitecturaGIT/bibliography.bib}
+\usetheme{{Madrid}}
 \usecolortheme{}
 \usefonttheme{}
 \useinnertheme{}
@@ -43,8 +44,8 @@
 
 
 \section{Buses del Sistema (Sección)}
-\label{sec:org24439da}
-\begin{frame}[label={sec:org2dd0334}]{Estructuras de Interconexión (E1, 7, 97)}
+\label{sec:org69cbde6}
+\begin{frame}[label={sec:org20a9942}]{Estructuras de Interconexión (E1, 7, 97)}
 \begin{itemize}
 \item Conjunto de líneas que conectan los módulos elementales de un computador.
 Para que se comuniquen e intercambien datos.
@@ -56,7 +57,7 @@ Para que se comuniquen e intercambien datos.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org540a06e}]{Estructuras de Interconexión (E1, 7, 97)}
+\begin{frame}[label={sec:orge7ffe17}]{Estructuras de Interconexión (E1, 7, 97)}
 \alert{Módulos:}
 
 \begin{itemize}
@@ -71,7 +72,7 @@ controla el funcionamiento del sistema. Puede recibir señales de interrupción.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd89c877}]{Estructuras de Interconexión (E1, 7, 97)}
+\begin{frame}[label={sec:org84e4fed}]{Estructuras de Interconexión (E1, 7, 97)}
 \alert{Intercambios de Datos:}
 
 \begin{itemize}
@@ -84,8 +85,8 @@ controla el funcionamiento del sistema. Puede recibir señales de interrupción.
 \end{frame}
 
 \section{Interconexión con Buses (Sección)}
-\label{sec:org22d150a}
-\begin{frame}[label={sec:org55b0111}]{Interconexión con Buses (E1, 7, 99)}
+\label{sec:org7144302}
+\begin{frame}[label={sec:orgcc641cd}]{Interconexión con Buses (E1, 7, 99)}
 \begin{itemize}
 \item Los buses son caminos de comunicación entre dos o más dispositivos con la
 habilidad de transmitir señales hacia los demás o recibir las señales emitidas.
@@ -98,7 +99,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga6193ee}]{Estructura del Bus  (E1, 7, 99)}
+\begin{frame}[label={sec:org104856b}]{Estructura del Bus  (E1, 7, 99)}
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./Images/Lineas.jpg}
 \end{center}
@@ -113,7 +114,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org17907c4}]{Estructura del Bus}
+\begin{frame}[label={sec:org4917067}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de datos?
 \begin{itemize}
@@ -124,7 +125,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org1dc3831}]{Estructura del Bus}
+\begin{frame}[label={sec:orgb14c8cb}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de dirección?
 \begin{itemize}
@@ -136,7 +137,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org8e2148c}]{Estructura del Bus}
+\begin{frame}[label={sec:orge7c7a7a}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de control?
 \begin{itemize}
@@ -148,7 +149,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org17bea74}]{Jerarquía de Buses Múltiples (E2, 7)}
+\begin{frame}[label={sec:orgcd59971}]{Jerarquía de Buses Múltiples (E2, 7)}
 Si se conecta un gran número de dispositivos al bus, las prestaciones pueden disminuir. Hay dos causas principales: 
 
 \begin{enumerate}
@@ -157,7 +158,7 @@ Si se conecta un gran número de dispositivos al bus, las prestaciones pueden di
 \item Posible cuello de botella. Este problema se puede resolver en alguna medida incrementando la velocidad a la que el bus puede transferir los datos y utilizando buses más anchos (por ejemplo incrementando el bus de datos de 32 a 64 bits)
 \end{enumerate}
 \end{frame}
-\begin{frame}[label={sec:org97cf9cb}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:orge3e0309}]{Jerarquía de buses múltiples}
 Por consiguiente, la mayoría de los computadores utilizan varios buses, normalmente organizados
 jerárquicamente.
 
@@ -165,7 +166,7 @@ jerárquicamente.
 \includegraphics[width=0.8\textwidth]{./Images/jerarquiaBuses.jpeg}
 \end{center} 
 \end{frame}
-\begin{frame}[label={sec:orgc7ce7ce}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:org896d22a}]{Jerarquía de buses múltiples}
 La respuesta común a esta
 situación, por parte de la industria, ha sido proponer un bus de alta velocidad que está estrechamente
 integrado con el resto del sistema, y requiere solo un adaptador (bridge) entre el bus del procesador y
@@ -177,18 +178,18 @@ entreplanta (mezzanine architecture).
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd104d9f}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:org37e875b}]{Jerarquía de buses múltiples}
 La ventaja de esta organización es que el bus de alta velocidad acerca al procesador los dispositi
 vos que exigen prestaciones elevadas y al mismo tiempo es independiente del procesador. Así, se pue
 den tolerar las diferencias de velocidad entre el procesador y el bus de altas prestaciones y las
 variaciones en la definición de las líneas de los buses. Los cambios en la arquitectura del procesador
 no afectan al bus de alta velocidad, y viceversa.
 \end{frame}
-\begin{frame}[label={sec:org47502e5}]{Elementos de Diseño de un Bus (E2, 7)}
+\begin{frame}[label={sec:org23b93a9}]{Elementos de Diseño de un Bus (E2, 7)}
 \end{frame}
 \section{Interconexión punto a punto}
-\label{sec:org34b8cbe}
-\begin{frame}[label={sec:org83f7b79}]{Interconexión punto a punto}
+\label{sec:org540d615}
+\begin{frame}[label={sec:org2d65c41}]{Interconexión punto a punto}
 La interconexión punto a punto consiste en establecer una conexión directa entre dos componentes de un sistema informáticos.
 Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue el aumento de frecuencia.
 
@@ -202,7 +203,7 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:orged4ec31}]{Ventajas}
+\begin{frame}[label={sec:orgf35d509}]{Ventajas}
 \begin{columns}
 \begin{column}{0.8\columnwidth}
 \begin{itemize}
@@ -213,14 +214,102 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:orgb74d3db}]{QPI (E3, 11)}
+\section{Introducción QPI}
+\label{sec:orgb30373c}
+\begin{frame}[label={sec:orge4b4d38}]{Introducción QPI}
+Fue creado para solucionar los problemas de los buses compartidos, ofreciendo una conexión directa
+y eficiente entre los componentes. Este tipo de interconexión mejora el rendimiento al permitir
+una comunicación más rápida y efectiva entre los procesadores y otros dispositivos, sin las
+restricciones de los buses. 
+\par
+\end{frame}
+\begin{frame}[label={sec:orgb414139}]{Características QPI:}
+\begin{itemize}
+\item Múltiples conexiones directas
+\item Arquitectura de protocolo en capas
+\item Transferencia de datos en paquetes
+\end{itemize}
+\end{frame}
+
+\section{QuickPath Interconnect (QPI)}
+\label{sec:org610ebf8}
+
+\begin{frame}[label={sec:org30a5800}]{Características de QPI}
+\begin{itemize}
+\item \alert{\alert{Múltiples conexiones directas:}}
+\begin{itemize}
+\item Cada componente (como el procesador, la memoria o los dispositivos de entrada/salida) se conecta
+directamente con otros componentes de manera individual, sin tener que compartir el mismo canal.
+\item Al tener conexiones directas, cada componente puede enviar y recibir datos sin esperar turno,
+lo que hace que todo funcione de manera más rápida y eficiente.
+\end{itemize}
+\item \alert{\alert{Arquitectura de protocolo en capas:}}
+\begin{itemize}
+\item Se usan protocolos como TCP/IP para organizar y manejar la comunicación. En lugar de enviar
+un mensaje de una sola forma simple, se utilizan diferentes pasos o etapas para asegurar que el
+mensaje llegue correctamente.
+\end{itemize}
+\item \alert{\alert{Transferencia en paquetes:}}
+\begin{itemize}
+\item Los datos no se envían de manera continua, sino que se dividen en paquetes.
+\item Cada paquete contiene una parte de los datos y también incluye información adicional, como encabezados
+de control para saber a dónde deben ir los datos y códigos de control de errores para asegurarse de que
+los datos no se pierdan o se dañen durante el envío.
+\end{itemize}
+\end{itemize}
+
+\begin{block}{Arquitectura de protocolo de cuatro capas}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{./Images/QPI.png}
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org86886b9}]{Arquitectura de protocolo QPI}
+\begin{itemize}
+\item \alert{\alert{Capa física:}}
+\begin{itemize}
+\item Está formada por 84 enlaces individuales, cada camino de datos consta de un par de cables,
+llamados "carriles", que transmiten un bit a la vez.
+\item Hay 20 carriles en cada dirección: una para enviar datos y otra para recibir.
+\item Cada conjunto de 20 bits que se transmite se llama "phit", con una velocidad de transferencia
+de 6.4 giga transferencias por segundo (GT/s).
+\end{itemize}
+\item \alert{\alert{Capa de enlace:}}
+\begin{itemize}
+\item Realiza dos funciones clave: control de flujo y control de errores.
+Estas se aplican a cada "flit" (unidad de control de flujo).
+\item Cada flit tiene una carga útil de 72 bits, que contiene los datos o mensajes.
+\item Los flits de datos transportan los bits reales entre los procesadores y el
+controlador de entrada/salida.
+\item Los flits de mensaje se utilizan para funciones como el control de flujo y
+el control de errores.
+\item El control de flujo asegura que el transmisor no envíe datos más rápido de
+lo que el receptor puede procesar.
+\item El control de errores detecta y corrige errores en los datos durante la
+transmisión, si un error se detecta, el receptor solicita al transmisor
+ que retransmita los datos dañados.
+\end{itemize}
+\item \alert{\alert{Capa de enrutamiento:}}
+\begin{itemize}
+\item Se encarga de decidir el camino que un paquete de datos tomará a través
+de los enlaces del sistema.
+\end{itemize}
+\item \alert{\alert{Capa de protocolo:}}
+\begin{itemize}
+\item Los paquetes de datos se envían entre los componentes del sistema, como
+procesadores y memoria. Estos paquetes tienen un formato estándar, aunque
+      pueden adaptarse según las necesidades de diferentes tipos de dispositivos.
+\end{itemize}
+\end{itemize}
 \end{frame}
 \section{PCI Express (E4, 11)}
-\label{sec:orgbf211cc}
-\begin{frame}[label={sec:orgb9a1c11}]{PCI Express (E4, 11)}
+\label{sec:org416c751}
+\begin{frame}[label={sec:orgbddeb5d}]{PCI Express (E4, 11)}
 \end{frame}
+
 \section{Referencias}
-\label{sec:org173474d}
+\label{sec:orga989a3d}
 \begin{frame}[allowframebreaks]{Bibliografía}
 \printbibliography
 \end{frame}
