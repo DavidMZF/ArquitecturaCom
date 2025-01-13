@@ -10,8 +10,8 @@
 
 #+title: S8-Buses-del-Sistema
 #+date: 
-#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera
-#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec, danny.tipan@epn.edu.ec, anderson.herrera@epn.edu.ec
+#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera, Sebastian Chicaiza
+#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec, danny.tipan@epn.edu.ec, anderson.herrera@epn.edu.ec, sebastian.chicaiza@epn.edu.ec
 #+language: es
 #+select_tags: export
 #+exclude_tags: noexport
