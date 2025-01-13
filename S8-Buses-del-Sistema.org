@@ -10,8 +10,8 @@
 
 #+title: S8-Buses-del-Sistema
 #+date: 
-#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera, Sebastian Chicaiza
-#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec, danny.tipan@epn.edu.ec, anderson.herrera@epn.edu.ec, sebastian.chicaiza@epn.edu.ec
+#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera, Sebastian Chicaiza, Jairo Angulo
+#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec, danny.tipan@epn.edu.ec, anderson.herrera@epn.edu.ec, sebastian.chicaiza@epn.edu.ec, jairo.angulo@epn.edu.ec
 #+language: es
 #+select_tags: export
 #+exclude_tags: noexport
@@ -128,6 +128,46 @@ den tolerar las diferencias de velocidad entre el procesador y el bus de altas p
 variaciones en la definición de las líneas de los buses. Los cambios en la arquitectura del procesador
 no afectan al bus de alta velocidad, y viceversa.
 ** Elementos de Diseño de un Bus (E2, 7)
+* Buses del Sistema (Sección)
+
+** Elementos de Diseño de un Bus (E2, 7)
+
+#+ATTR_LATEX: :width 0.8\textwidth
+[[./Images/bus.jpg]]
+
+** Elementos de Diseño de un Bus (E2, 7) 
+
+*** 1. Tipo
+    - *Dedicado*: El bus está reservado para una única función o dispositivo, asegurando una comunicación directa y sin interferencias.
+    - *Multiplexado*: Se comparte el mismo bus para diferentes tipos de datos o señales (por ejemplo, datos y direcciones), utilizando mecanismos de temporización o control para alternar entre usos.
+
+
+
+*** 2. Método de arbitraje
+    - *Centralizado*: Existe un único controlador que decide cuál dispositivo puede usar el bus en cada momento. Es más sencillo de implementar pero puede ser un punto único de fallo.
+    - *Distribuido*: La responsabilidad del control del bus se reparte entre los dispositivos conectados, permitiendo un diseño más robusto y descentralizado.
+** Elementos de Diseño de un Bus (E2, 7)
+
+*** 3. Temporización
+    - *Síncrono*: Las transferencias de datos se realizan basándose en un reloj común. Es más rápido, pero menos flexible, ya que todos los dispositivos deben funcionar a la misma velocidad.
+    - *Asíncrono*: No requiere un reloj común, permitiendo que cada dispositivo opere a su propia velocidad. Es más flexible, aunque más complejo de coordinar.
+
+
+
+*** 4. Anchura del bus
+    - *Dirección*: Define el número de líneas disponibles para las direcciones, lo que determina la cantidad máxima de dispositivos o memoria que se pueden direccionar.
+    - *Datos*: Indica el número de bits que se pueden transferir simultáneamente, influyendo en la velocidad del sistema (por ejemplo, un bus de datos de 32 bits permite transferir 32 bits en paralelo).
+
+** Elementos de Diseño de un Bus (E2, 7)
+
+*** 5. Tipo de transferencia de datos
+    - *Lectura*: Se transfieren datos desde un dispositivo (por ejemplo, memoria) al bus para que sean utilizados por otro dispositivo.
+    - *Escritura*: Se envían datos desde un dispositivo al bus para almacenarlos en otro (como en memoria).
+    - *Lectura-modificación-escritura*: Un ciclo donde se lee un dato, se modifica y luego se escribe de nuevo en memoria o dispositivo.
+    - *Lectura-después-de-escritura*: Se escriben los datos en un dispositivo y luego se leen para verificar la operación.
+    - *Bloque*: Se transfieren varios datos consecutivos en una sola operación, optimizando la eficiencia para grandes volúmenes de datos.
+
+
 * Interconexión punto a punto
 ** Interconexión punto a punto
 La interconexión punto a punto consiste en establecer una conexión directa entre dos componentes de un sistema informáticos.
