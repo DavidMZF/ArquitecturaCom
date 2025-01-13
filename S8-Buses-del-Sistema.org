@@ -1,7 +1,7 @@
 #+options: H:2
 #+latex_class: beamer
 #+columns: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
-#+beamer_theme: Madrid
+#+beamer_theme: default
 #+beamer_color_theme:
 #+beamer_font_theme:
 #+beamer_inner_theme:
@@ -18,12 +18,12 @@
 #+creator: Emacs 27.1 (Org mode 9.3)
 #+cite_export: biblatex
 
-#+BIBLIOGRAPHY: bibliography.bib
-#+LATEX_HEADER: \nocite{*}
+#+bibliography: ./FormatoTareas/bibliography.bib
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[spanish]{babel}
 #+LATEX_HEADER: \usepackage[backend=biber,citestyle=apa, style=apa]{biblatex}
+
 
 * Buses del Sistema (Sección)
 ** Estructuras de Interconexión (E1, 7, 97)
@@ -98,10 +98,44 @@
   - Escritura
   - Lectura
 
+** Jerarquía de Buses Múltiples (E2, 7)
+Si se conecta un gran número de dispositivos al bus, las prestaciones pueden disminuir. Hay dos causas principales: 
+
+1. Mayor retarde de propagación. Este retardo determina el tiempo que necesitan los dispositivos para coordinarse en el uso del bus.
+
+2. Posible cuello de botella. Este problema se puede resolver en alguna medida incrementando la velocidad a la que el bus puede transferir los datos y utilizando buses más anchos (por ejemplo incrementando el bus de datos de 32 a 64 bits) 
+** Jerarquía de buses múltiples 
+Por consiguiente, la mayoría de los computadores utilizan varios buses, normalmente organizados
+jerárquicamente.
+
+#+ATTR_LATEX: :width 0.8\textwidth
+[[./Images/jerarquiaBuses.jpeg]] 
+** Jerarquía de buses múltiples
+La respuesta común a esta
+situación, por parte de la industria, ha sido proponer un bus de alta velocidad que está estrechamente
+integrado con el resto del sistema, y requiere solo un adaptador (bridge) entre el bus del procesador y
+el bus de alta velocidad. En algunas ocasiones, esta disposición es conocida como arquitectura de
+entreplanta (mezzanine architecture).
+
+#+ATTR_LATEX: :width 0.8\textwidth
+[[./Images/jerarquiaBuses2.jpeg]]
+
+** Jerarquía de buses múltiples
+La ventaja de esta organización es que el bus de alta velocidad acerca al procesador los dispositi
+vos que exigen prestaciones elevadas y al mismo tiempo es independiente del procesador. Así, se pue
+den tolerar las diferencias de velocidad entre el procesador y el bus de altas prestaciones y las
+variaciones en la definición de las líneas de los buses. Los cambios en la arquitectura del procesador
+no afectan al bus de alta velocidad, y viceversa.
+** Elementos de Diseño de un Bus (E2, 7)
+* Interconexión punto a punto
+** Interconexión punto a punto (E3, 11)
+** QPI (E3, 11)
+* PCI Express (E4, 11)
+** PCI Express (E4, 11)
 * Referencias
 ** Bibliografía
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks
 :END:
 
-#+Print_Bibliography: 
+#+print_bibliography: 
