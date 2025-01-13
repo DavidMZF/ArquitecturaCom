@@ -1,4 +1,4 @@
-% Created 2025-01-12 Sun 22:16
+% Created 2025-01-12 Sun 22:33
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -22,12 +22,12 @@
 \usefonttheme{}
 \useinnertheme{}
 \useoutertheme{}
-\author{Elizabeth Lopez, Francisco Morales}
+\author{Elizabeth Lopez, Francisco Morales, Juan Murillo}
 \date{}
 \title{S8-Buses-del-Sistema}
 
 \hypersetup{
- pdfauthor={Elizabeth Lopez, Francisco Morales},
+ pdfauthor={Elizabeth Lopez, Francisco Morales, Juan Murillo},
  pdftitle={S8-Buses-del-Sistema},
  pdfkeywords={},
  pdfsubject={},
@@ -43,8 +43,8 @@
 
 
 \section{Buses del Sistema (Sección)}
-\label{sec:orgd090569}
-\begin{frame}[label={sec:orge7c8b61}]{Estructuras de Interconexión (E1, 7, 97)}
+\label{sec:org24439da}
+\begin{frame}[label={sec:org2dd0334}]{Estructuras de Interconexión (E1, 7, 97)}
 \begin{itemize}
 \item Conjunto de líneas que conectan los módulos elementales de un computador.
 Para que se comuniquen e intercambien datos.
@@ -56,7 +56,7 @@ Para que se comuniquen e intercambien datos.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgc096434}]{Estructuras de Interconexión (E1, 7, 97)}
+\begin{frame}[label={sec:org540a06e}]{Estructuras de Interconexión (E1, 7, 97)}
 \alert{Módulos:}
 
 \begin{itemize}
@@ -71,7 +71,7 @@ controla el funcionamiento del sistema. Puede recibir señales de interrupción.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org27e56e3}]{Estructuras de Interconexión (E1, 7, 97)}
+\begin{frame}[label={sec:orgd89c877}]{Estructuras de Interconexión (E1, 7, 97)}
 \alert{Intercambios de Datos:}
 
 \begin{itemize}
@@ -84,8 +84,8 @@ controla el funcionamiento del sistema. Puede recibir señales de interrupción.
 \end{frame}
 
 \section{Interconexión con Buses (Sección)}
-\label{sec:orgffff00a}
-\begin{frame}[label={sec:orgce5e88a}]{Interconexión con Buses (E1, 7, 99)}
+\label{sec:org22d150a}
+\begin{frame}[label={sec:org55b0111}]{Interconexión con Buses (E1, 7, 99)}
 \begin{itemize}
 \item Los buses son caminos de comunicación entre dos o más dispositivos con la
 habilidad de transmitir señales hacia los demás o recibir las señales emitidas.
@@ -98,7 +98,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgd224f7f}]{Estructura del Bus  (E1, 7, 99)}
+\begin{frame}[label={sec:orga6193ee}]{Estructura del Bus  (E1, 7, 99)}
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./Images/Lineas.jpg}
 \end{center}
@@ -113,7 +113,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgf35e4c1}]{Estructura del Bus}
+\begin{frame}[label={sec:org17907c4}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de datos?
 \begin{itemize}
@@ -124,7 +124,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org60cba59}]{Estructura del Bus}
+\begin{frame}[label={sec:org1dc3831}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de dirección?
 \begin{itemize}
@@ -136,7 +136,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgfd4b1b2}]{Estructura del Bus}
+\begin{frame}[label={sec:org8e2148c}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de control?
 \begin{itemize}
@@ -148,7 +148,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge05049f}]{Jerarquía de Buses Múltiples (E2, 7)}
+\begin{frame}[label={sec:org17bea74}]{Jerarquía de Buses Múltiples (E2, 7)}
 Si se conecta un gran número de dispositivos al bus, las prestaciones pueden disminuir. Hay dos causas principales: 
 
 \begin{enumerate}
@@ -157,7 +157,7 @@ Si se conecta un gran número de dispositivos al bus, las prestaciones pueden di
 \item Posible cuello de botella. Este problema se puede resolver en alguna medida incrementando la velocidad a la que el bus puede transferir los datos y utilizando buses más anchos (por ejemplo incrementando el bus de datos de 32 a 64 bits)
 \end{enumerate}
 \end{frame}
-\begin{frame}[label={sec:orgc5f2089}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:org97cf9cb}]{Jerarquía de buses múltiples}
 Por consiguiente, la mayoría de los computadores utilizan varios buses, normalmente organizados
 jerárquicamente.
 
@@ -165,7 +165,7 @@ jerárquicamente.
 \includegraphics[width=0.8\textwidth]{./Images/jerarquiaBuses.jpeg}
 \end{center} 
 \end{frame}
-\begin{frame}[label={sec:orgc003138}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:orgc7ce7ce}]{Jerarquía de buses múltiples}
 La respuesta común a esta
 situación, por parte de la industria, ha sido proponer un bus de alta velocidad que está estrechamente
 integrado con el resto del sistema, y requiere solo un adaptador (bridge) entre el bus del procesador y
@@ -177,22 +177,18 @@ entreplanta (mezzanine architecture).
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orgd71a823}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:orgd104d9f}]{Jerarquía de buses múltiples}
 La ventaja de esta organización es que el bus de alta velocidad acerca al procesador los dispositi
 vos que exigen prestaciones elevadas y al mismo tiempo es independiente del procesador. Así, se pue
 den tolerar las diferencias de velocidad entre el procesador y el bus de altas prestaciones y las
 variaciones en la definición de las líneas de los buses. Los cambios en la arquitectura del procesador
 no afectan al bus de alta velocidad, y viceversa.
 \end{frame}
-\begin{frame}[label={sec:org0b3a5bf}]{Elementos de Diseño de un Bus (E2, 7)}
+\begin{frame}[label={sec:org47502e5}]{Elementos de Diseño de un Bus (E2, 7)}
 \end{frame}
 \section{Interconexión punto a punto}
-\label{sec:org35c00fc}
-\begin{frame}[label={sec:org8d74865}]{Interconexión punto a punto (E3, 11)}
-\end{frame}
-\section{Interconexión punto a punto}
-\label{sec:orgcf58319}
-\begin{frame}[label={sec:org955de72}]{Interconexión punto a punto}
+\label{sec:org34b8cbe}
+\begin{frame}[label={sec:org83f7b79}]{Interconexión punto a punto}
 La interconexión punto a punto consiste en establecer una conexión directa entre dos componentes de un sistema informáticos.
 Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue el aumento de frecuencia.
 
@@ -206,7 +202,7 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:orga4799d7}]{Ventajas}
+\begin{frame}[label={sec:orged4ec31}]{Ventajas}
 \begin{columns}
 \begin{column}{0.8\columnwidth}
 \begin{itemize}
@@ -217,14 +213,14 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 \end{column}
 \end{columns}
 \end{frame}
-\begin{frame}[label={sec:org21f1918}]{QPI (E3, 11)}
+\begin{frame}[label={sec:orgb74d3db}]{QPI (E3, 11)}
 \end{frame}
 \section{PCI Express (E4, 11)}
-\label{sec:org17f79be}
-\begin{frame}[label={sec:org319bfb8}]{PCI Express (E4, 11)}
+\label{sec:orgbf211cc}
+\begin{frame}[label={sec:orgb9a1c11}]{PCI Express (E4, 11)}
 \end{frame}
 \section{Referencias}
-\label{sec:orga20d0f7}
+\label{sec:org173474d}
 \begin{frame}[allowframebreaks]{Bibliografía}
 \printbibliography
 \end{frame}

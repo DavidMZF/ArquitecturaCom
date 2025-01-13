@@ -10,8 +10,8 @@
 
 #+title: S8-Buses-del-Sistema
 #+date: 
-#+author: Elizabeth Lopez, Francisco Morales
-#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec
+#+author: Elizabeth Lopez, Francisco Morales, Juan Murillo
+#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec
 #+language: es
 #+select_tags: export
 #+exclude_tags: noexport
