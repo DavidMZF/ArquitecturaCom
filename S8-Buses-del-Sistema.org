@@ -1,0 +1,107 @@
+#+options: H:2
+#+latex_class: beamer
+#+columns: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+beamer_theme: Madrid
+#+beamer_color_theme:
+#+beamer_font_theme:
+#+beamer_inner_theme:
+#+beamer_outer_theme:
+#+beamer_header:
+
+#+title: S8-Buses-del-Sistema
+#+date: 
+#+author: Elizabeth Lopez, Francisco Morales
+#+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec
+#+language: es
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.3)
+#+cite_export: biblatex
+
+#+BIBLIOGRAPHY: bibliography.bib
+#+LATEX_HEADER: \nocite{*}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage[backend=biber,citestyle=apa, style=apa]{biblatex}
+
+* Buses del Sistema (Sección)
+** Estructuras de Interconexión (E1, 7, 97)
+
+- Conjunto de líneas que conectan los módulos elementales de un computador.
+  Para que se comuniquen e intercambien datos.
+- La estructura depende de los intercambios que se produzcan en los módulos.
+
+#+attr_latex: :width 0.3\textwidth
+[[./Images/Modulos.jpg]]
+
+** Estructuras de Interconexión (E1, 7, 97)
+*Módulos:*
+
+- **Memoria:** constituido por N palabras de igual longitud. Se pueden realizar las
+  operaciones Read(Leer) y Write(Escribir). La posición de memoria se especifica
+  mediante una dirección.
+- **Módulo de E/S:** se encarga de controlar los dispositivos externos enlazados
+  a los puertos, donde se les asignara una dirección M. Controla los datos de salida
+  y entrada. Realiza las operaciones de lectura y escritura. Envía señales de interrupción.
+- **Procesador:** lee instrucciones y datos. Escribe datos después de procesarlos y
+  controla el funcionamiento del sistema. Puede recibir señales de interrupción.
+
+** Estructuras de Interconexión (E1, 7, 97)
+*Intercambios de Datos:*
+
+- **Memoria a procesador:** el procesador lee información desde la memoria.
+- **Procesador a memoria:** el procesador escribe un dato en la memoria.
+- **E/S a procesador:** el procesador lee datos de un dispositivo de E/S.
+- **Procesador a E/S:** el procesador envía datos al dispositivo de  E/S.
+- **Memoria a E/S - E/S a Memoria:** ambos intercambian datos directamente.
+
+* Interconexión con Buses (Sección)
+** Interconexión con Buses (E1, 7, 99)
+
+- Los buses son caminos de comunicación entre dos o más dispositivos con la
+  habilidad de transmitir señales hacia los demás o recibir las señales emitidas.
+- Solo un dispositivo puede emitir la señal en un periodo de tiempo. Si ambos
+  transmiten la señal, esta podria solaparse y distorsionarse.
+- Los caminos o lineas del bus transmiten señales binarias ya sea a travez de una
+  sola línea o de varias de manera paralela.
+- Existen diferentes tipos de buses para la comunicacion de diversos componentes.
+  El que trabaja con los módulos elementales se denomina (System bus).
+
+** Estructura del Bus  (E1, 7, 99)
+
+#+ATTR_LATEX: :width 0.8\textwidth
+[[./Images/Lineas.jpg]]
+
+- ¿Qué tipos de líneas componen un Bus de Sistema?
+  - Lineas de datos.
+  - Lineas de direccion.
+  - Lineas de control.
+
+** Estructura del Bus
+- ¿Qué son las líneas de datos?
+  - Transporte
+  - Datos
+  - Memoria -> Procesador
+
+** Estructura del Bus 
+- ¿Qué son las líneas de dirección?
+  - Ubicación
+  - Memoria
+  - Puertos de E/S
+  - Anchura del bus
+    
+** Estructura del Bus 
+- ¿Qué son las líneas de control?
+  - Control
+  - Señales
+  - Escritura
+  - Lectura
+
+* Referencias
+** Bibliografía
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+#+Print_Bibliography: 
