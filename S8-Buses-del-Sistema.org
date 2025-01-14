@@ -9,7 +9,7 @@
 #+beamer_header:
 
 #+title: S8-Buses-del-Sistema
-#+date: 
+#+date: 2025-01-13
 #+author: Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera, Sebastian Chicaiza, Jairo Angulo
 #+email: elizabeth.lopez@epn.edu.ec, francisco.morales01@epn.edu.ec, juan.murillo@epn.edu.ec,angel.falcon@epn.edu.ec, danny.tipan@epn.edu.ec, anderson.herrera@epn.edu.ec, sebastian.chicaiza@epn.edu.ec, jairo.angulo@epn.edu.ec
 #+language: es
@@ -129,8 +129,6 @@ variaciones en la definición de las líneas de los buses. Los cambios en la arq
 no afectan al bus de alta velocidad, y viceversa.
 ** Elementos de Diseño de un Bus (E2, 7)
 * Buses del Sistema (Sección)
-
-** Elementos de Diseño de un Bus (E2, 7)
 
 #+ATTR_LATEX: :width 0.8\textwidth
 [[./Images/bus.jpg]]
@@ -288,7 +286,7 @@ Actúa como un dispositivo de almacenamiento intermedio para manejar las diferen
 Además, traduce entre los formatos de transacción PCIe y los requisitos de señal y control del procesador y la memoria.
 \end{minipage}%
 \begin{minipage}{0.5\textwidth}
-\includegraphics[width=\linewidth]{raiz.png}
+\includegraphics[width=\linewidth]{./Images/raiz.png}
 \end{minipage}
 #+END_EXPORT
 
@@ -335,7 +333,7 @@ de transacción (TLP).
 :PROPERTIES:
 :BEAMER_env: block
 :END:
-[[file:arquitectura.png]]
+[[file:./Images/arquitectura.png]]
 
 * Capas del Protocolo
 ** Capa Física
@@ -447,7 +445,7 @@ Este paquete es generado por la capa de enlace y es más pequeño que el TLP.
 :PROPERTIES:
 :BEAMER_env: block
 :END:
-[[file:formato.png]]
+[[file:./Images/formato.png]]
 
 ** Capa de Enlace de Datos
 :PROPERTIES:

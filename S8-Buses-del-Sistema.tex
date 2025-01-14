@@ -1,4 +1,4 @@
-% Created 2025-01-13 Mon 07:31
+% Created 2025-01-13 Mon 20:59
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation]{beamer}
 \usepackage[utf8]{inputenc}
@@ -23,12 +23,12 @@
 \usefonttheme{}
 \useinnertheme{}
 \useoutertheme{}
-\author{Elizabeth Lopez, Francisco Morales, Juan Murillo}
-\date{}
+\author{Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera, Sebastian Chicaiza, Jairo Angulo}
+\date{2025-01-13}
 \title{S8-Buses-del-Sistema}
 
 \hypersetup{
- pdfauthor={Elizabeth Lopez, Francisco Morales, Juan Murillo},
+ pdfauthor={Elizabeth Lopez, Francisco Morales, Juan Murillo , Angel Falcon, Danny Tipan, Anderson Herrera, Sebastian Chicaiza, Jairo Angulo},
  pdftitle={S8-Buses-del-Sistema},
  pdfkeywords={},
  pdfsubject={},
@@ -44,8 +44,8 @@
 
 
 \section{Buses del Sistema (Sección)}
-\label{sec:org69cbde6}
-\begin{frame}[label={sec:org20a9942}]{Estructuras de Interconexión (E1, 7, 97)}
+\label{sec:org274efe4}
+\begin{frame}[label={sec:org17f1210}]{Estructuras de Interconexión (E1, 7, 97)}
 \begin{itemize}
 \item Conjunto de líneas que conectan los módulos elementales de un computador.
 Para que se comuniquen e intercambien datos.
@@ -57,7 +57,7 @@ Para que se comuniquen e intercambien datos.
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:orge7ffe17}]{Estructuras de Interconexión (E1, 7, 97)}
+\begin{frame}[label={sec:orgbab70de}]{Estructuras de Interconexión (E1, 7, 97)}
 \alert{Módulos:}
 
 \begin{itemize}
@@ -72,7 +72,7 @@ controla el funcionamiento del sistema. Puede recibir señales de interrupción.
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org84e4fed}]{Estructuras de Interconexión (E1, 7, 97)}
+\begin{frame}[label={sec:orga276795}]{Estructuras de Interconexión (E1, 7, 97)}
 \alert{Intercambios de Datos:}
 
 \begin{itemize}
@@ -85,8 +85,8 @@ controla el funcionamiento del sistema. Puede recibir señales de interrupción.
 \end{frame}
 
 \section{Interconexión con Buses (Sección)}
-\label{sec:org7144302}
-\begin{frame}[label={sec:orgcc641cd}]{Interconexión con Buses (E1, 7, 99)}
+\label{sec:org54dce4a}
+\begin{frame}[label={sec:org57fb148}]{Interconexión con Buses (E1, 7, 99)}
 \begin{itemize}
 \item Los buses son caminos de comunicación entre dos o más dispositivos con la
 habilidad de transmitir señales hacia los demás o recibir las señales emitidas.
@@ -99,7 +99,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org104856b}]{Estructura del Bus  (E1, 7, 99)}
+\begin{frame}[label={sec:org2a6b81d}]{Estructura del Bus  (E1, 7, 99)}
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./Images/Lineas.jpg}
 \end{center}
@@ -114,7 +114,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org4917067}]{Estructura del Bus}
+\begin{frame}[label={sec:orga6f5b8d}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de datos?
 \begin{itemize}
@@ -125,7 +125,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgb14c8cb}]{Estructura del Bus}
+\begin{frame}[label={sec:orgce4d684}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de dirección?
 \begin{itemize}
@@ -137,7 +137,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge7c7a7a}]{Estructura del Bus}
+\begin{frame}[label={sec:org91f8d5a}]{Estructura del Bus}
 \begin{itemize}
 \item ¿Qué son las líneas de control?
 \begin{itemize}
@@ -149,7 +149,7 @@ El que trabaja con los módulos elementales se denomina (System bus).
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgcd59971}]{Jerarquía de Buses Múltiples (E2, 7)}
+\begin{frame}[label={sec:orgef98df3}]{Jerarquía de Buses Múltiples (E2, 7)}
 Si se conecta un gran número de dispositivos al bus, las prestaciones pueden disminuir. Hay dos causas principales: 
 
 \begin{enumerate}
@@ -158,7 +158,7 @@ Si se conecta un gran número de dispositivos al bus, las prestaciones pueden di
 \item Posible cuello de botella. Este problema se puede resolver en alguna medida incrementando la velocidad a la que el bus puede transferir los datos y utilizando buses más anchos (por ejemplo incrementando el bus de datos de 32 a 64 bits)
 \end{enumerate}
 \end{frame}
-\begin{frame}[label={sec:orge3e0309}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:orge9058df}]{Jerarquía de buses múltiples}
 Por consiguiente, la mayoría de los computadores utilizan varios buses, normalmente organizados
 jerárquicamente.
 
@@ -166,7 +166,7 @@ jerárquicamente.
 \includegraphics[width=0.8\textwidth]{./Images/jerarquiaBuses.jpeg}
 \end{center} 
 \end{frame}
-\begin{frame}[label={sec:org896d22a}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:org3ed469a}]{Jerarquía de buses múltiples}
 La respuesta común a esta
 situación, por parte de la industria, ha sido proponer un bus de alta velocidad que está estrechamente
 integrado con el resto del sistema, y requiere solo un adaptador (bridge) entre el bus del procesador y
@@ -178,18 +178,73 @@ entreplanta (mezzanine architecture).
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org37e875b}]{Jerarquía de buses múltiples}
+\begin{frame}[label={sec:org7d4c6f6}]{Jerarquía de buses múltiples}
 La ventaja de esta organización es que el bus de alta velocidad acerca al procesador los dispositi
 vos que exigen prestaciones elevadas y al mismo tiempo es independiente del procesador. Así, se pue
 den tolerar las diferencias de velocidad entre el procesador y el bus de altas prestaciones y las
 variaciones en la definición de las líneas de los buses. Los cambios en la arquitectura del procesador
 no afectan al bus de alta velocidad, y viceversa.
 \end{frame}
-\begin{frame}[label={sec:org23b93a9}]{Elementos de Diseño de un Bus (E2, 7)}
+\begin{frame}[label={sec:org569936d}]{Elementos de Diseño de un Bus (E2, 7)}
 \end{frame}
+\section{Buses del Sistema (Sección)}
+\label{sec:org53cd128}
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{./Images/bus.jpg}
+\end{center}
+
+\begin{frame}[label={sec:orgeaf39b9}]{Elementos de Diseño de un Bus (E2, 7)}
+\begin{block}{1. Tipo}
+\begin{itemize}
+\item \alert{Dedicado}: El bus está reservado para una única función o dispositivo, asegurando una comunicación directa y sin interferencias.
+\item \alert{Multiplexado}: Se comparte el mismo bus para diferentes tipos de datos o señales (por ejemplo, datos y direcciones), utilizando mecanismos de temporización o control para alternar entre usos.
+\end{itemize}
+\end{block}
+
+
+
+\begin{block}{2. Método de arbitraje}
+\begin{itemize}
+\item \alert{Centralizado}: Existe un único controlador que decide cuál dispositivo puede usar el bus en cada momento. Es más sencillo de implementar pero puede ser un punto único de fallo.
+\item \alert{Distribuido}: La responsabilidad del control del bus se reparte entre los dispositivos conectados, permitiendo un diseño más robusto y descentralizado.
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[label={sec:orgdf46091}]{Elementos de Diseño de un Bus (E2, 7)}
+\begin{block}{3. Temporización}
+\begin{itemize}
+\item \alert{Síncrono}: Las transferencias de datos se realizan basándose en un reloj común. Es más rápido, pero menos flexible, ya que todos los dispositivos deben funcionar a la misma velocidad.
+\item \alert{Asíncrono}: No requiere un reloj común, permitiendo que cada dispositivo opere a su propia velocidad. Es más flexible, aunque más complejo de coordinar.
+\end{itemize}
+\end{block}
+
+
+
+\begin{block}{4. Anchura del bus}
+\begin{itemize}
+\item \alert{Dirección}: Define el número de líneas disponibles para las direcciones, lo que determina la cantidad máxima de dispositivos o memoria que se pueden direccionar.
+\item \alert{Datos}: Indica el número de bits que se pueden transferir simultáneamente, influyendo en la velocidad del sistema (por ejemplo, un bus de datos de 32 bits permite transferir 32 bits en paralelo).
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:orgeac6e69}]{Elementos de Diseño de un Bus (E2, 7)}
+\begin{block}{5. Tipo de transferencia de datos}
+\begin{itemize}
+\item \alert{Lectura}: Se transfieren datos desde un dispositivo (por ejemplo, memoria) al bus para que sean utilizados por otro dispositivo.
+\item \alert{Escritura}: Se envían datos desde un dispositivo al bus para almacenarlos en otro (como en memoria).
+\item \alert{Lectura-modificación-escritura}: Un ciclo donde se lee un dato, se modifica y luego se escribe de nuevo en memoria o dispositivo.
+\item \alert{Lectura-después-de-escritura}: Se escriben los datos en un dispositivo y luego se leen para verificar la operación.
+\item \alert{Bloque}: Se transfieren varios datos consecutivos en una sola operación, optimizando la eficiencia para grandes volúmenes de datos.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
 \section{Interconexión punto a punto}
-\label{sec:org540d615}
-\begin{frame}[label={sec:org2d65c41}]{Interconexión punto a punto}
+\label{sec:org8b97689}
+\begin{frame}[label={sec:orgffe67cd}]{Interconexión punto a punto}
 La interconexión punto a punto consiste en establecer una conexión directa entre dos componentes de un sistema informáticos.
 Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue el aumento de frecuencia.
 
@@ -203,7 +258,7 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:orgf35d509}]{Ventajas}
+\begin{frame}[label={sec:org2fdf55a}]{Ventajas}
 \begin{columns}
 \begin{column}{0.8\columnwidth}
 \begin{itemize}
@@ -215,15 +270,15 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
 \end{columns}
 \end{frame}
 \section{Introducción QPI}
-\label{sec:orgb30373c}
-\begin{frame}[label={sec:orge4b4d38}]{Introducción QPI}
+\label{sec:org952d437}
+\begin{frame}[label={sec:org626b543}]{Introducción QPI}
 Fue creado para solucionar los problemas de los buses compartidos, ofreciendo una conexión directa
 y eficiente entre los componentes. Este tipo de interconexión mejora el rendimiento al permitir
 una comunicación más rápida y efectiva entre los procesadores y otros dispositivos, sin las
 restricciones de los buses. 
 \par
 \end{frame}
-\begin{frame}[label={sec:orgb414139}]{Características QPI:}
+\begin{frame}[label={sec:orgbce7359}]{Características QPI:}
 \begin{itemize}
 \item Múltiples conexiones directas
 \item Arquitectura de protocolo en capas
@@ -232,9 +287,9 @@ restricciones de los buses.
 \end{frame}
 
 \section{QuickPath Interconnect (QPI)}
-\label{sec:org610ebf8}
+\label{sec:org5d9216e}
 
-\begin{frame}[label={sec:org30a5800}]{Características de QPI}
+\begin{frame}[label={sec:org3f658f2}]{Características de QPI}
 \begin{itemize}
 \item \alert{\alert{Múltiples conexiones directas:}}
 \begin{itemize}
@@ -257,15 +312,17 @@ de control para saber a dónde deben ir los datos y códigos de control de error
 los datos no se pierdan o se dañen durante el envío.
 \end{itemize}
 \end{itemize}
-
-\begin{block}{Arquitectura de protocolo de cuatro capas}
-\begin{center}
-\includegraphics[width=0.8\textwidth]{./Images/QPI.png}
-\end{center}
-\end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org86886b9}]{Arquitectura de protocolo QPI}
+
+\begin{frame}[label={sec:org6edac9c}]{QPI una arquitectura de protocolo de cuatro capas}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./Images/QPI.png}
+\end{center}    
+\end{frame}
+
+
+\begin{frame}[label={sec:org723b50a}]{Arquitectura de protocolo QPI}
 \begin{itemize}
 \item \alert{\alert{Capa física:}}
 \begin{itemize}
@@ -304,12 +361,211 @@ procesadores y memoria. Estos paquetes tienen un formato estándar, aunque
 \end{itemize}
 \end{frame}
 \section{PCI Express (E4, 11)}
-\label{sec:org416c751}
-\begin{frame}[label={sec:orgbddeb5d}]{PCI Express (E4, 11)}
+\label{sec:org11be652}
+\section{Introducción a PCI Express}
+\label{sec:orgf6e008b}
+\begin{frame}[label={sec:org388ec79}]{¿Qué es PCI Express?}
+PCI Express representa la evolución natural del bus PCI tradicional. Esta tecnología surgió como respuesta a las crecientes demandas de velocidad y eficiencia en la transferencia de datos. A diferencia de su predecesor, PCIe implementa un esquema de interconexión punto a punto, abandonando la arquitectura de bus compartido para ofrecer mayor rendimiento y flexibilidad.
 \end{frame}
 
+\begin{frame}[label={sec:org4b6aa8a}]{Origen y Desarrollo}
+La necesidad de PCIe surgió cuando los esquemas basados en bus tradicionales alcanzaron sus límites de capacidad. Los dispositivos modernos, como las tarjetas gráficas y las unidades de almacenamiento de alta velocidad, demandaban un nuevo estándar capaz de manejar mayores velocidades de transferencia y múltiples flujos de datos simultáneos.
+\end{frame}
+
+\section{Dispositivo complejo raíz}
+\label{sec:org2a3e6ea}
+\begin{frame}[label={sec:org013ca0d}]{El Complejo Raíz}
+En el corazón de la arquitectura PCIe encontramos el Complejo Raíz, un componente crucial que actúa como puente entre el procesador, la memoria y el tejido de conmutación PCIe. Este elemento no solo gestiona las conexiones, sino que también armoniza las diferentes velocidades de transferencia entre los componentes del sistema.
+\end{frame}
+
+\begin{frame}[label={sec:orgab6b1b3}]{El Complejo Raíz}
+\begin{minipage}{0.5\textwidth}
+También conocido como chipset o puente anfitrión, conecta el procesador y el subsistema de memoria al tejido de conmutación PCI Express, que comprende uno o más dispositivos PCIe y conmutadores PCIe.
+Actúa como un dispositivo de almacenamiento intermedio para manejar las diferencias en las tasas de datos entre los controladores de E/S y los componentes de memoria y procesador.
+Además, traduce entre los formatos de transacción PCIe y los requisitos de señal y control del procesador y la memoria.
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\linewidth]{./Images/raiz.png}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[label={sec:org07014fc}]{Dispositivos que implementan PCIe}
+\alert{\alert{Conmutador:}} El conmutador gestiona múltiples flujos PCIe.
+
+\alert{\alert{Punto final PCIe:}} Dispositivo o controlador de E/S que implementa PCIe, como un
+conmutador Gigabit ethernet, un controlador gráfico o de vídeo, una interfaz de
+disco o un controlador de comunicaciones.
+
+\alert{\alert{Endpoint heredado:}} La categoría de punto final heredado está pensada para diseños
+existentes que se han migrado a PCI , y permite comportamientos heredados como uso de espacio de E/S y transacciones bloqueadas. No se permite que los
+puntos finales PCI Express requieran el uso de espacio de E/S en tiempo de
+ejecución y no deben utilizar transacciones bloqueadas.
+
+\alert{\alert{Puente PCIe/PCI:}} Permite conectar dispositivos PCI antiguos a sistemas basados
+en PCIe.
+\end{frame}
+
+\section{Arquitectura}
+\label{sec:org53d85da}
+\begin{frame}[label={sec:org3052cc1}]{La arquitectura del protocolo PCIe}
+La arquitectura del protocolo PCIe abarca las siguientes capas:
+
+\alert{\alert{Físico:}} Consiste en los propios cables que transportan las señales, así como los
+circuitos y la lógica que soportan las funciones auxiliares necesarias en la
+transmisión y recepción de los 1 y los 0.
+
+\alert{\alert{Enlace de datos:}} Es responsable de la transmisión fiable y del control de flujo. Los
+paquetes de datos generados y consumidos por la DLL se denominan paquetes de capa
+de enlace de datos (DLLP).
+
+\alert{\alert{Transacción:}} Genera y consume paquetes de datos utilizados para implementar
+mecanismos de transferencia de datos de carga/almacenamiento y también gestiona
+el control de flujo de dichos paquetes entre los dos componentes de un enlace. Los
+paquetes de datos generados y consumidos por la TL se denominan paquetes de capa
+de transacción (TLP).
+\end{frame}
+
+\begin{frame}[label={sec:org6e22a58}]{La arquitectura del protocolo PCIe}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./Images/arquitectura.png}
+\end{center}
+\end{frame}
+
+\section{Capas del Protocolo}
+\label{sec:org811f028}
+\begin{frame}[label={sec:org27b5e01}]{Capa Física}
+La capa física de PCIe maneja la transmisión real de datos a través del medio físico. Emplea técnicas sofisticadas de codificación 128b/130b y scrambling para mantener la integridad de la señal y la sincronización. Estas técnicas permiten alcanzar velocidades de transferencia de hasta 16 GB/s, garantizando la fiabilidad en la transmisión de datos.
+\end{frame}
+
+\begin{frame}[label={sec:org5b1baf7}]{Capa de transacción PCIe}
+La capa de transacciones (TL) recibe peticiones de lectura y escritura del software por
+encima de la TL y crea paquetes de peticiones para su transmisión a un destino a través de
+la capa de enlace. La mayoría de las transacciones utilizan una técnica de transacción
+dividida. Con la técnica de
+transacción dividida, la finalización está separada en el tiempo de la solicitud, en contraste
+con una operación de bus típica en la que ambos lados de una transacción deben estar
+disponibles para aprovechar y utilizar el bus. Entre la solicitud y la finalización, otro
+tráfico PCIe puede utilizar el enlace.
+\end{frame}
+
+\begin{frame}[label={sec:org69e1ea7}]{Espacios de dirección}
+La TL admite cuatro espacios de dirección:
+
+\alert{\alert{Memoria:}} El espacio de memoria incluye la memoria principal del sistema.
+También incluye los dispositivos de E/S PCIe. Ciertos rangos de direcciones de
+memoria se asignan a dispositivos de E/S.
+
+\alert{\alert{E/S:}} Este espacio de direcciones se utiliza para dispositivos PCI heredados, con
+rangos de direcciones de memoria reservados utilizados para direccionar dispositivos
+de E/S heredados.
+
+\alert{\alert{Configuración:}} Este espacio de direcciones permite a la TL leer/escribir los registros de
+configuración asociados a los dispositivos de E/S.
+
+\alert{\alert{Mensaje:}} Este espacio de direcciones es para señales de control relacionadas con
+interrupciones, manejo de errores y gestión de energía.
+\end{frame}
+
+\begin{frame}[label={sec:orgd21d508}]{Tipos de transmisión}
+\begin{center}
+\begin{tabular}{lll}
+Espacio de direcciones & Tipo TLP & Propósito\\[0pt]
+\hline
+Memoria & Petición de lectura de memoria & Transfiere datos hacia o desde una ubicación en el mapa de memoria del sistema.\\[0pt]
+ & Solicitud de bloqueo de lectura de memoria & \\[0pt]
+ & Petición de escritura en memoria & \\[0pt]
+\hline
+E/S & Solicitud de lectura de E/S & Transfiere datos a o desde una ubicación en el mapa de memoria del sistema para dispositivos heredados.\\[0pt]
+ & Solicitud de escritura de E/S & \\[0pt]
+\hline
+Configuración & Config Tipo 0 Petición de lectura & Transferir datos hacia o desde una ubicación en el espacio de configuración de un dispositivo PCIe.\\[0pt]
+ & Config Tipo 0 Petición de escritura & \\[0pt]
+ & Config Tipo 1 Petición de lectura & \\[0pt]
+ & Solicitud de escritura Config Tipo 1 & \\[0pt]
+\hline
+Mensaje & Solicitud de mensaje & Proporciona mensajería en banda e informes de eventos.\\[0pt]
+ & Solicitud de mensaje con datos & \\[0pt]
+\hline
+Memoria, E/S, Configuración & Finalización & Devuelto para determinadas solicitudes.\\[0pt]
+ & Finalización con datos & \\[0pt]
+ & Finalización bloqueada & \\[0pt]
+ & Finalización bloqueada con datos & \\[0pt]
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:orgfdf432a}]{Formato de Unidad de Datos del Protocolo PCIe}
+Las transacciones PCIe se transmiten utilizando paquetes de capa de transacción.
+El formato de los paquetes en el protocolo PCIe (Peripheral Component Interconnect Express), desglosado en dos niveles:
+
+1.- Paquete de la Capa de Transacción (Transaction Layer Packet - TLP):
+Este paquete es generado por la capa de transacción y contiene las siguientes secciones:
+
+\alert{\alert{STP framing (Start of TLP framing):}} Señal de inicio del paquete para delimitarlo. Ocupa 1 byte.
+
+\alert{\alert{Sequence Number:}} Un campo que indica el número de secuencia del paquete para garantizar la entrega ordenada. También ocupa 1 byte.
+
+\alert{\alert{Header:}} Contiene información esencial para procesar el paquete, como dirección, tipo de operación, etc. Puede ocupar 12 o 16 bytes, dependiendo de la operación.
+
+\alert{\alert{Data:}} La carga útil del paquete, que puede variar entre 0 y 4096 bytes. Es opcional, dependiendo del tipo de transacción.
+
+\alert{\alert{ECRC (End-to-End CRC):}} Código de redundancia cíclica (CRC) opcional para verificar la integridad de los datos de extremo a extremo. Ocupa 0 o 4 bytes.
+
+\alert{\alert{LCRC (Link CRC):}} Otro CRC obligatorio para verificar la integridad de los datos en el enlace. También ocupa 4 bytes.
+
+\alert{\alert{STP framing (End of TLP framing):}} Marca el final del paquete, similar al campo inicial.
+Este paquete es luego entregado a la capa de enlace para mayor encapsulación.
+\end{frame}
+
+\begin{frame}[label={sec:org2600b64}]{Formato de Unidad de Datos del Protocolo PCIe}
+2.-Paquete de la Capa de Enlace de Datos (Data Link Layer Packet - DLLP):
+Este paquete es generado por la capa de enlace y es más pequeño que el TLP.
+
+\alert{\alert{Start:}} Indica el inicio del paquete de la capa de enlace. Ocupa 1 byte.
+
+\alert{\alert{DLLP:}} Contiene datos de control o gestión del enlace. Este es el núcleo del paquete de la capa de enlace.
+
+\alert{\alert{CRC:}} Código de redundancia cíclica usado para verificar la integridad de los datos transmitidos. También ocupa 1 byte.
+
+\alert{\alert{End:}} Indica el final del paquete. Ocupa 1 byte.
+\end{frame}
+
+\begin{frame}[label={sec:org162c825}]{Formato de Unidad de Datos del Protocolo PCIe}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./Images/formato.png}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org6fa3c08}]{Capa de Enlace de Datos}
+Esta capa implementa mecanismos robustos para garantizar la entrega confiable de datos. Gestiona el control de flujo y maneja los paquetes de nivel de enlace (DLLPs). Su sistema de verificación incluye números de secuencia y códigos de verificación, asegurando la integridad de cada transmisión.
+\end{frame}
+
+
+
+\section{Arquitectura PCIe}
+\label{sec:orgc1da2bf}
+\begin{frame}[label={sec:org4f61a57}]{Componentes Básicos}
+\begin{itemize}
+\item El sistema PCIe consta de varios componentes clave:
+\begin{enumerate}
+\item \alert{\alert{Root Complex}}: Es el componente principal que se conecta al procesador. Controla el acceso a los dispositivos y coordina las transferencias de datos.
+
+\item \alert{\alert{Switches}}: Son los dispositivos que gestionan y dirigen el tráfico entre diferentes dispositivos conectados al sistema PCIe.
+
+\item \alert{\alert{Endpoints}}: Son los dispositivos conectados al bus PCIe, como tarjetas gráficas, SSDs, y otros periféricos.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\section{Conclusiones}
+\label{sec:org4232492}
+\begin{frame}[label={sec:orge014e3d}]{Impacto en la Industria}
+PCIe ha revolucionado la forma en que los componentes de computadora se comunican entre sí. Su arquitectura escalable y eficiente ha permitido el desarrollo de nuevas tecnologías y aplicaciones, estableciendo un estándar que continúa evolucionando para satisfacer las necesidades futuras de la industria.
+\end{frame}
+
+
 \section{Referencias}
-\label{sec:orga989a3d}
+\label{sec:org1dc2922}
 \begin{frame}[allowframebreaks]{Bibliografía}
 \printbibliography
 \end{frame}
