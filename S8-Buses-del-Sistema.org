@@ -223,13 +223,10 @@ Esta arquitectura reemplazo a los buses compartidos, y la principal razón fue e
        de control para saber a dónde deben ir los datos y códigos de control de errores para asegurarse de que
        los datos no se pierdan o se dañen durante el envío.
 
-\begin{frame}{QPI una arquitectura de protocolo de cuatro capas}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.8\textwidth]{./Images/QPI.png} 
-        \caption{ Arquitectura  QPI}
-    \end{figure}
-\end{frame} 
+       
+**  QPI una arquitectura de protocolo de cuatro capas
+   
+  [[./Images/QPI.png]]    
 
 
 ** Arquitectura de protocolo QPI
